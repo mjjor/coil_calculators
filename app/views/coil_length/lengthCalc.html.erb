@@ -1,0 +1,26 @@
+<table>
+	<tr>	
+		<td><%= image_tag('magest_BlkWht_60x60_Icon.png') %></td>
+  		<th><h3>Coil Length Calculator</h3></th>
+	</tr>
+</table>
+<hr />
+<table bgcolor = "#D9D9D9">	
+	<tr>	
+		<td width = "100" bgcolor = "#ffffff">&nbsp;</td>
+  		<th width = "165" bgcolor = "#ffffff"><h4>Coil Dimensions</h4></th>
+	</tr>
+</table>
+
+<%= form_tag('lengthCalcResult') do |c| %>
+
+<%= render(:partial => 'lengthcalcform', :locals => {:c => c}) %>
+
+<br />
+<div class="form-buttons">
+      <%= submit_tag("Calculate") %>
+</div>
+
+<hr>
+
+<% end %>

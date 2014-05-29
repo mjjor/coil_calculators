@@ -1,0 +1,2 @@
+module CoilWidthHelper
+end

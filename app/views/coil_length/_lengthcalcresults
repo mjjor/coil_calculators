@@ -1,0 +1,28 @@
+<table bgcolor = "#D9D9D9" summary = "Length Calc Results">
+	<tr>
+		<th width = '160' bgcolor = "#ffffff" ><center><h3><b>Coil Specifications</b></h3></center></th>
+		<td bgcolor = "#ffffff" ><center><%= image_tag('coil2.png', size: "60", alt: "Coil Length") %></center></td>
+	</tr>
+	<tr>
+		<td width = '160'><b>Length (Feet):</b></td>
+		<td width = '160' bgcolor = "#ffffff"><center><%= number_with_precision((params[:results][4].to_f), precision: 4) %></center></td>
+		</tr>
+	
+		<td width = '160'><b>Weight (Lbs.):</b></td>
+		<td width = '160' bgcolor = "#ffffff"><center><%= number_with_precision((params[:results][6].to_f), precision: 4) %></center></td>
+		</tr>
+	<tr>
+		<td width = '160'><b>Per SqFt Pounds:</b></td>
+		<td width = '160' bgcolor = "#ffffff"><center><%= number_with_precision((params[:results][5].to_f), precision: 4) %></center></td>
+	</tr>
+	<tr>	
+	<tr>
+		<td width = '160'><b>Square Footage:</b></td>
+		<td width = '160' bgcolor = "#ffffff"><center><%= number_with_precision((params[:results][7].to_f), precision: 4)%></center></td>
+	</tr>
+</table>
+<hr />
+
+<%= button_to "New Coil", "lengthCalc", :method => :get %>
+
+	

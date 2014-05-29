@@ -1,0 +1,18 @@
+<table bgcolor = "#ffffff" summary = "Width Calc Fields">
+	<tr >
+		<td width = '160' bgcolor = '#D9D9D9'><b>Material Thickness: </b></td>
+		<td width = '160' bgcolor = '#D9D9D9'><center><%= number_with_precision((params[:results][0].to_f), precision: 4) %></center></td>
+	</tr>
+	<tr>
+		<td width = '160' bgcolor = '#D9D9D9'><b>Coil Width: </b></td>
+		<td width = '160' bgcolor = '#D9D9D9'><center><%= number_with_precision((params[:results][1].to_f), precision: 4)  %></center></td>
+	</tr>
+	<tr>
+		<td width = '160' bgcolor = '#D9D9D9'><b>Inner Diameter: </b></td>
+		<td width = '160' bgcolor = '#D9D9D9'><center><%= number_with_precision((params[:results][2].to_f), precision: 4) %></center</td>
+	</tr>
+	<tr>
+		<td width = '160' bgcolor = '#D9D9D9'><b>Outer Diameter: </b></td>
+		<td width = '160' bgcolor = '#D9D9D9'><center><%= number_with_precision((params[:results][3].to_f), precision: 4)  %></center></td>
+	</tr>
+</table>

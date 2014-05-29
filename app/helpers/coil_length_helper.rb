@@ -1,0 +1,2 @@
+module CoilLengthHelper
+end
