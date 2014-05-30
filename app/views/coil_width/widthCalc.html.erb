@@ -17,11 +17,21 @@
 <%= render(:partial => 'widthcalcform', :locals => {:c => c}) %>
 
 <br />
-<div class="form-buttons">
-      <%= submit_tag("Calculate") %>
-</div>
-
+<table width = "260">
+	<tr>
+		<td width = "160">
+			<div>
+				<%= link_to(image_tag("backtohome2-emboss.png"), {controller: "landing_page", action: "index", method: :get}) %>
+			</div>
+		</td>
+		<td width = "100">
+			<div class =" button" >
+      			<%= submit_tag("Calculate") %>
+			</div>
+		</td>
+		</tr>
+		</table>	
+<% end %>
 <hr>
 
-<% end %>
 

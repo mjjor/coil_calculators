@@ -1,38 +1,53 @@
-<table bgcolor = "#D9D9D9" summary = "Width Calc Results">
+<table bgcolor = "#D(D(D(" summary = "Width Calc Results">
 	<tr>
-		<td width = '160' bgcolor = "#ffffff" ><center><h3><b>Coil Specifications</b></h3></center></td>
-		<td bgcolor = "#ffffff" ><center><%= image_tag('C-Joist_Small.png', size: "60", alt: "Stud") %> <br /><b> Stud </b></center></td>
-		<td bgcolor = "#ffffff"><center><%= image_tag('Structural_Track_Small.png', size: "60", alt: "Track") %> <br /><b> Track </b></center></td>
+		<td width = '160' bgcolor = "#FFFFFF" ><center><h3><b>Coil Specifications</b></h3></center></td>
+		<td bgcolor = "#FFFFFF" width = '160'><center><%= image_tag('C-Joist_Small.png', size: "60", alt: "Stud") %> <br /><b> Stud </b></center></td>
+		<td bgcolor = "#FFFFFF" width = '160'><center><%= image_tag('Structural_Track_Small.png', size: "60", alt: "Track") %> <br /><b> Track </b></center></td>
+	</tr>
+</table>
+	<table bgcolor = "#FFFFFF" summary = "Width Calc Results">
+	<tr>
+		<td bgcolor= "#D9D9D9" width = '160'><b>Coil Width (Inches):          </b></td>
+		<td width = '100' bgcolor = "#FFFFFF"><center><%= number_with_precision((params[:results][4].to_f), precision: 4) %></center></td>
+		<td bgcolor= "#D9D9D9" width = '100'><center><%= number_with_precision((params[:results][5].to_f), precision: 4) %></center></td>
 	</tr>
 	<tr>
-		<td width = '160'><b>Coil Width (Inches):          </b></td>
-		<td width = '100' bgcolor = "#ffffff"><center><%= number_with_precision((params[:results][4].to_f), precision: 4) %></center></td>
-		<td width = '100'><center><%= number_with_precision((params[:results][5].to_f), precision: 4) %></center></td>
+		<td bgcolor = "#D9D9D9" width = '160'><b>SqFt/Foot:</b></td>
+		<td width = '100' bgcolor = "#FFFFFF"><center><%= number_with_precision((params[:results][6].to_f), precision: 4) %></center></td>
+		<td bgcolor= "#D9D9D9" width = '100'><center><%= number_with_precision((params[:results][7].to_f), precision: 4)%></center></td>
 	</tr>
 	<tr>
-		<td width = '160'><b>SqFt/Foot:</b></td>
-		<td width = '100' bgcolor = "#ffffff"><center><%= number_with_precision((params[:results][6].to_f), precision: 4) %></center></td>
-		<td width = '100'><center><%= number_with_precision((params[:results][7].to_f), precision: 4)%></center></td>
+		<td bgcolor = "#D9D9D9" width = '160'><b>Pounds/Foot:  </b></td>
+		<td width = '100' bgcolor = "#FFFFFF"><center><%= number_with_precision((params[:results][8].to_f), precision: 4)%></center></td>
+		<td bgcolor= "#D9D9D9" width = '100'><center><%= number_with_precision((params[:results][9].to_f), precision: 4)%></center></td>
 	</tr>
 	<tr>
-		<td width = '160'><b>Pounds/Foot:  </b></td>
-		<td width = '100' bgcolor = "#ffffff"><center><%= number_with_precision((params[:results][8].to_f), precision: 4)%></center></td>
-		<td width = '100'><center><%= number_with_precision((params[:results][9].to_f), precision: 4)%></center></td>
-	</tr>
-	<tr>
-		<td width = '160'><b>Coil Gauge:  </b></td>
-		<td width = '160' bgcolor = '#ffffff'><center><%= params[:results][10] %></center></td>
+		<td bgcolor = '#D9D9D9' Swidth = '160'><b>Coil Gauge:  </b></td>
+		<td width = '160' bgcolor = '#FFFFFF'><center><%= params[:results][10] %></center></td>
 		<td width = '160' bgcolor = '#D9D9D9'><center><%= params[:results][10] %></center></td>
 		
 	</tr>
 	<tr>
-		<td width = '160'><b>Coil Mils:  </b></td>
-		<td width = '160' bgcolor = '#ffffff'><center><%= params[:results][11] %></center></td>
+		<td bgcolor = '#D9D9D9' width = '160'><b>Coil Mils:  </b></td>
+		<td width = '160' bgcolor = '#FFFFFF'><center><%= params[:results][11] %></center></td>
 		<td width = '160' bgcolor = '#D9D9D9'><center><%= params[:results][11] %></center></td>
 	</tr>
 </table>
 <hr />
-
-<%= button_to "New Profile", "widthCalc", :method => :get %>
+<table width = "480">
+	<tr>
+		<td width = '160'>
+			<div>
+				<%= link_to(image_tag("backtohome2-emboss.png"), {controller: "landing_page", action: "index", method: :get}) %>
+			</div>
+		</td>
+		<td width = '160'>
+			&nbsp;
+		</td>
+		<td width = '160'>
+			<%= button_to "New Profile", "widthCalc", :method => :get %>
+		</td>
+	</tr>
+</table>
 
 	

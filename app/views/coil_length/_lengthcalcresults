@@ -1,28 +1,44 @@
 <table bgcolor = "#D9D9D9" summary = "Length Calc Results">
 	<tr>
 		<th width = '160' bgcolor = "#ffffff" ><center><h3><b>Coil Specifications</b></h3></center></th>
-		<td bgcolor = "#ffffff" ><center><%= image_tag('coil2.png', size: "60", alt: "Coil Length") %></center></td>
+		<td width = '160' bgcolor = "#ffffff"><center><%= image_tag('coilUnravel1.jpg', size: "100x60", alt: "Coil Length") %></center></td>
 	</tr>
+	</table>
+<table bgcolor = "#FFFFFF" summary = "Length Calc Results">	
 	<tr>
-		<td width = '160'><b>Length (Feet):</b></td>
-		<td width = '160' bgcolor = "#ffffff"><center><%= number_with_precision((params[:results][4].to_f), precision: 4) %></center></td>
+		<td bgcolor = "#D9D9D9" width = '160'><b>Length (Feet):</b></td>
+		<td bgcolor = "#D9D9D9" width = '160'><center><%= number_with_precision((params[:results][4].to_f), precision: 4) %></center></td>
 		</tr>
 	
-		<td width = '160'><b>Weight (Lbs.):</b></td>
-		<td width = '160' bgcolor = "#ffffff"><center><%= number_with_precision((params[:results][6].to_f), precision: 4) %></center></td>
+		<td bgcolor = "#D9D9D9" width = '160'><b>Weight (Lbs.):</b></td>
+		<td bgcolor = "#D9D9D9" width = '160'><center><%= number_with_precision((params[:results][6].to_f), precision: 4) %></center></td>
 		</tr>
 	<tr>
-		<td width = '160'><b>Per SqFt Pounds:</b></td>
-		<td width = '160' bgcolor = "#ffffff"><center><%= number_with_precision((params[:results][5].to_f), precision: 4) %></center></td>
+		<td bgcolor = "#D9D9D9" width = '160'><b>Per SqFt Pounds:</b></td>
+		<td bgcolor = "#D9D9D9" width = '160'><center><%= number_with_precision((params[:results][5].to_f), precision: 4) %></center></td>
 	</tr>
 	<tr>	
 	<tr>
-		<td width = '160'><b>Square Footage:</b></td>
-		<td width = '160' bgcolor = "#ffffff"><center><%= number_with_precision((params[:results][7].to_f), precision: 4)%></center></td>
+		<td bgcolor = "#D9D9D9" width = '160'><b>Square Footage:</b></td>
+		<td bgcolor = "#D9D9D9" width = '160'><center><%= number_with_precision((params[:results][7].to_f), precision: 4)%></center></td>
 	</tr>
+	</table>
+	<br />
+	<table>
+    <tr>
+    <td bgcolor = "#D9D9D9" width = '160'>
+    	<div>
+			<%= link_to(image_tag("backtohome2-emboss.png"), {controller: "landing_page", action: "index", method: :get}) %>
+		</div>
+    </td>
+    <th bgcolor = "#D9D9D9" width = '160'>
+    	<%= button_to "New Coil", "lengthCalc", :method => :get %>
+    </th>
+    </tr>
 </table>
 <hr />
 
-<%= button_to "New Coil", "lengthCalc", :method => :get %>
+
+
 
 	

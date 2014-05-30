@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'landing_page/index'
+
   get 'coil_length/lengthCalc'
   post '/coil_length/lengthCalcResult'
   get '/coil_length/showLengthResult'

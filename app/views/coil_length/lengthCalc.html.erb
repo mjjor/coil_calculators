@@ -7,8 +7,8 @@
 <hr />
 <table bgcolor = "#D9D9D9">	
 	<tr>	
-		<td width = "100" bgcolor = "#ffffff">&nbsp;</td>
-  		<th width = "165" bgcolor = "#ffffff"><h4>Coil Dimensions</h4></th>
+		<td width = "120" bgcolor = "#D9D9D9">&nbsp;</td>
+  		<th width = "165" bgcolor = "#D9D9D9"><h4>Coil Dimensions</h4></th>
 	</tr>
 </table>
 
@@ -17,9 +17,20 @@
 <%= render(:partial => 'lengthcalcform', :locals => {:c => c}) %>
 
 <br />
-<div class="form-buttons">
-      <%= submit_tag("Calculate") %>
-</div>
+
+<table width = "285">
+	<tr>
+		<td>
+		<div>
+				<%= link_to(image_tag("backtohome2-emboss.png"), {controller: "landing_page", action: "index", method: :get}) %>
+			</div>
+		</td>
+		<td>
+			<div class="form-buttons">
+      			<%= submit_tag("Calculate") %>
+			</div>
+		</td>
+
 
 <hr>
 
